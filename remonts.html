@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Stabils — remontdarbi Rīgā</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3f3f0;--paper:#fff;--ink:#121417;--muted:#62676d;--line:#dcdcd6;--blue:#1f4fd8;--orange:#ff6a2b;
+--disp:"Space Grotesk",system-ui,sans-serif;--sans:"Golos Text",system-ui,sans-serif;color-scheme:light}
+[hidden]{display:none!important}*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16.5px/1.6 var(--sans);overflow-x:clip}
+a{color:inherit}
+.ph{background-size:cover;background-position:center;background-color:#c9ccd1}
+.demo{background:var(--ink);color:#dfe3e8;font-size:12.5px;padding:7px 16px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.demo a{color:#9db7ff}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(243,243,240,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font:700 24px var(--disp);letter-spacing:-.03em;text-decoration:none;display:flex;gap:8px;align-items:center}
+.logo i{width:22px;height:22px;background:linear-gradient(135deg,var(--blue) 50%,var(--orange) 50%);display:inline-block}
+.links{display:flex;gap:24px;font-size:15px;color:var(--muted)}.links a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:8px;padding:13px 20px;font:600 15px var(--sans);text-decoration:none;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.b{background:var(--blue);color:#fff}.btn.l{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,64px);align-items:end;padding-block:clamp(40px,7vw,96px)}
+h1{font:700 clamp(46px,8vw,104px)/.92 var(--disp);letter-spacing:-.05em;margin:0 0 22px}
+h1 em{font-style:normal;color:var(--blue)}
+.hero p{font-size:18px;color:var(--muted);max-width:44ch;margin:0 0 28px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.heroimg{aspect-ratio:4/5;border-radius:6px;background-image:url(img/remonts-1.jpg),linear-gradient(150deg,#b8c2d6,#5f6b80);position:relative;max-width:100%}
+.heroimg .card{position:absolute;left:-24px;bottom:28px;background:var(--paper);border-radius:10px;padding:14px 16px;box-shadow:0 20px 40px -20px #12141766;display:grid;gap:2px;font-size:13px;color:var(--muted)}
+.heroimg .card b{font:700 26px var(--disp);color:var(--ink)}
+.logos{display:flex;gap:28px;flex-wrap:wrap;align-items:center;color:var(--muted);font:600 14px var(--sans);border-block:1px solid var(--line);padding-block:20px}
+.logos b{font:700 22px var(--disp);color:var(--ink)}
+section{padding-block:clamp(64px,9vw,110px)}
+.eyebrow{font:600 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+h2{font:700 clamp(34px,5vw,60px)/1 var(--disp);letter-spacing:-.04em;margin:12px 0 16px}
+.muted{color:var(--muted)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);border-top:1.5px solid var(--ink);margin-top:32px}
+.s{padding:22px 18px 22px 0;border-right:1px solid var(--line);display:grid;gap:8px;align-content:start}
+.s:last-child{border-right:0}
+.s .n{font:500 13px var(--disp);color:var(--orange)}
+.s b{font:700 22px var(--disp);letter-spacing:-.02em}
+.proj{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.p{display:grid;gap:10px}
+.p .ph{aspect-ratio:4/3;border-radius:6px}
+.p b{font:700 18px var(--disp)}
+.p span{font-size:14px;color:var(--muted)}
+.calc{background:var(--ink);color:#e8ebef;border-radius:14px;padding:clamp(22px,4vw,52px);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,56px)}
+.calc h2{color:#fff}
+form{display:grid;gap:12px}
+label{font-size:13px;font-weight:600;color:#a9b0b8;display:grid;gap:6px}
+input,select{font:inherit;font-size:16px;padding:13px 14px;border:1px solid #2c3036;border-radius:8px;background:#1a1d21;color:#fff;min-width:0;width:100%;color-scheme:dark}
+input[type=range]{padding:0;accent-color:var(--orange)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{font:600 14px var(--sans);border:1px solid #2c3036;background:transparent;color:#e8ebef;border-radius:8px;padding:9px 14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--orange);border-color:var(--orange);color:#111}
+.res{border-top:1px solid #2c3036;padding-top:16px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.res b{font:700 34px var(--disp);color:#fff;letter-spacing:-.03em}
+.ok{background:#1f4fd833;padding:12px;border-radius:8px}
+footer{padding-block:48px 28px;border-top:1px solid var(--line);margin-top:40px}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}
+footer h4{font:600 12px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin:0 0 10px}
+.copy{margin-top:36px;font-size:13px;color:var(--muted)}
+.reveal{transform:translateY(26px);transition:transform .9s cubic-bezier(.2,.7,.2,1)}.reveal.in{transform:none}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+@media (max-width:880px){.links{display:none}.hero,.calc,.fg{grid-template-columns:1fr}.svc{grid-template-columns:1fr 1fr}.s{border-right:0;border-bottom:1px solid var(--line)}.proj{grid-template-columns:1fr 1fr}.heroimg .card{left:12px}}
+@media (max-width:540px){.svc,.proj,.two{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.reveal{transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="demo"><span>Demo projekts · izdomāts remontdarbu uzņēmums</span><a href="./">← Atpakaļ uz portfolio</a></div>
+<nav class="nav"><div class="wrap"><a class="logo" href="#"><i></i>Stabils</a><div class="links"><a href="#darbi">Darbi</a><a href="#projekti">Projekti</a><a href="#tame">Tāme</a></div><a class="btn b" href="#tame">Saņemt tāmi</a></div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="reveal"><div class="eyebrow">Remontdarbi · Rīga un Pierīga</div>
+    <h1 style="margin-top:14px">Remonts, kas <em>beidzas</em> laikā</h1>
+    <p>Dzīvokļi, vannas istabas un biroji. Fiksēta tāme un termiņš līgumā. Ja kavējam, maksājam mēs.</p>
+    <div class="row"><a class="btn b" href="#tame">Aprēķināt cenu</a><a class="btn l" href="#projekti">Skatīt projektus</a></div></div>
+  <div class="heroimg ph reveal"><div class="card"><span>Pabeigti projekti</span><b>140+</b></div></div>
+</header>
+<div class="logos reveal"><span><b>2 gadi</b> garantija</span><span><b>Fiksēta</b> cena līgumā</span><span><b>Bezmaksas</b> apskate un tāme</span></div>
+</div>
+
+<section id="darbi"><div class="wrap">
+  <div class="reveal"><div class="eyebrow">Ko darām</div><h2>Pilns cikls no tāmes līdz atslēgām</h2></div>
+  <div class="svc reveal">
+    <div class="s"><span class="n">01</span><b>Dzīvokļa remonts</b><span class="muted">Kosmētiskais un kapitālais, ar dizaina projektu.</span></div>
+    <div class="s"><span class="n">02</span><b>Vannas istaba</b><span class="muted">Flīzēšana, santehnika, hidroizolācija.</span></div>
+    <div class="s"><span class="n">03</span><b>Elektrība</b><span class="muted">Jauna instalācija un apgaismojums.</span></div>
+    <div class="s"><span class="n">04</span><b>Biroji</b><span class="muted">Remonts vakaros, lai netraucētu darbam.</span></div>
+  </div>
+</div></section>
+
+<section id="projekti" style="padding-top:0"><div class="wrap">
+  <div class="reveal"><div class="eyebrow">Projekti</div><h2>Pēdējie darbi</h2></div>
+  <div class="proj">
+    <div class="p reveal"><div class="ph" style="background-image:url(img/remonts-2.jpg),linear-gradient(150deg,#d7d2c8,#8d8577)"></div><b>2-istabu dzīvoklis, Teika</b><span>54 m² · 7 nedēļas</span></div>
+    <div class="p reveal"><div class="ph" style="background-image:url(img/remonts-3.jpg),linear-gradient(150deg,#c8d3dc,#6f8090)"></div><b>Vannas istaba, Āgenskalns</b><span>6 m² · 12 dienas</span></div>
+    <div class="p reveal"><div class="ph" style="background-image:url(img/remonts-4.jpg),linear-gradient(150deg,#e1e1dc,#9a9a92)"></div><b>Birojs, centrs</b><span>120 m² · 5 nedēļas</span></div>
+  </div>
+</div></section>
+
+<section id="tame" style="padding-top:0"><div class="wrap">
+  <div class="calc reveal">
+    <div><div class="eyebrow">Tāme</div><h2>Uzzini cenu 30 sekundēs</h2><p style="color:#a9b0b8">Orientējošs aprēķins. Precīzu tāmi sagatavosim pēc bezmaksas apskates.</p></div>
+    <form id="f">
+      <label>Remonta veids<div class="seg" id="seg"></div></label>
+      <label>Platība: <span id="mv" style="color:#fff">50 m²</span><input id="m" type="range" min="5" max="200" value="50"></label>
+      <div class="two"><label>Vārds<input id="n" required autocomplete="off"></label><label>Tālrunis<input id="t" type="tel" required autocomplete="off"></label></div>
+      <div class="res"><div><div style="font-size:13px;color:#a9b0b8">Orientējoši</div><b id="sum"></b></div><button class="btn b" type="submit">Pieteikt apskati</button></div>
+      <div class="ok" id="ok" hidden></div>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><div class="fg">
+  <div><a class="logo" href="#"><i></i>Stabils</a><p class="muted" style="max-width:30ch">Remontdarbi Rīgā un Pierīgā.</p></div>
+  <div><h4>Darba laiks</h4>P–Pk 8:00–18:00<br>S pēc vienošanās</div>
+  <div><h4>Kontakti</h4>Rīga<br>info@jusu-domens.lv</div>
+</div><div class="copy">Demo lapa. Izstrādāja Dmitrijs Pogodins · dmitrijs.web@outlook.com</div></div></footer>
+
+<script>
+const T=[["Kosmētiskais",45,75],["Kapitālais",150,230],["Vannas istaba",350,520]];let ty=0;
+const seg=document.getElementById("seg"),m=document.getElementById("m");
+function draw(){seg.replaceChildren(...T.map((t,i)=>{const b=document.createElement("button");b.type="button";b.textContent=t[0];b.setAttribute("aria-pressed",i===ty);b.onclick=()=>{ty=i;draw()};return b}));
+const a=+m.value;document.getElementById("mv").textContent=a+" m²";const f=n=>Math.round(n/50)*50;document.getElementById("sum").textContent=f(T[ty][1]*a).toLocaleString("lv")+"–"+f(T[ty][2]*a).toLocaleString("lv")+" €"}
+m.oninput=draw;draw();
+document.getElementById("f").addEventListener("submit",e=>{e.preventDefault();const ok=document.getElementById("ok");ok.textContent="Paldies! Piezvanīsim, lai vienotos par bezmaksas apskati. (Demo: īstajā lapā pieteikums nonāktu jūsu e-pastā.)";ok.hidden=false});
+if("IntersectionObserver"in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll(".reveal").forEach(el=>{if(el.getBoundingClientRect().top>innerHeight)io.observe(el);else el.classList.add("in")})}else document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
+</script>
+</body>
+</html>

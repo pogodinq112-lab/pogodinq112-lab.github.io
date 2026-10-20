@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Studija Zīle — skaistumkopšana Rīgā</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f4f1ec;--paper:#fbf9f6;--ink:#141513;--muted:#6b6d66;--line:#e2ddd4;--sage:#7d9480;--deep:#1d2420;--blush:#e9d5c7;--on:#fff;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Golos Text",system-ui,sans-serif;color-scheme:light}
+[hidden]{display:none!important}*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16.5px/1.65 var(--sans)}
+a{color:inherit}
+.ph{background-size:cover;background-position:center;background-color:#a8b8a9}
+.demo{background:var(--deep);color:#dfe7e1;font-size:12.5px;padding:7px 16px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.demo a{color:#c9dccb}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(244,241,236,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{font:600 30px var(--serif);letter-spacing:.01em;text-decoration:none}
+.logo span{font:500 11px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-left:8px;vertical-align:middle}
+.links{display:flex;gap:28px;font-size:14px;letter-spacing:.04em}.links a{text-decoration:none;color:var(--muted)}.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:14px 26px;font:500 14.5px var(--sans);letter-spacing:.03em;text-decoration:none;cursor:pointer;transition:background .25s,transform .25s}
+.btn:hover{background:var(--sage);transform:translateY(-2px)}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.btn.line:hover{background:var(--ink);color:#fff}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,96px)}
+.hero h1{font:500 clamp(54px,9vw,128px)/.88 var(--serif);letter-spacing:-.03em;margin:0 0 26px}
+.hero h1 em{font-style:italic;color:var(--sage)}
+.hero p{font-size:18px;color:var(--muted);max-width:40ch;margin:0 0 32px}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.rating{display:flex;gap:12px;align-items:center;margin-top:36px;font-size:14px;color:var(--muted)}
+.avs{display:flex}.avs i{width:36px;height:36px;border-radius:50%;border:2px solid var(--bg);margin-left:-10px;background-size:cover}
+.avs i:first-child{margin-left:0}
+.arch{position:relative;aspect-ratio:4/5;max-width:100%}
+.arch .ph{position:absolute;inset:0;border-radius:999px 999px 28px 28px;background-image:url(img/salon-1.jpg),linear-gradient(170deg,#c7d3c6,#7d9480 60%,#4c5f50)}
+.badge{position:absolute;left:-28px;bottom:48px;background:var(--paper);border-radius:20px;padding:16px 18px;box-shadow:0 18px 40px -18px rgba(20,21,19,.35);display:grid;gap:2px;font-size:13px;color:var(--muted)}
+.badge b{font:600 24px var(--serif);color:var(--ink)}
+.spin{position:absolute;right:-18px;top:28px;width:120px;height:120px;animation:rot 18s linear infinite}
+.spin text{font:600 10.5px var(--sans);letter-spacing:.32em;fill:var(--ink)}
+@keyframes rot{to{transform:rotate(360deg)}}
+section{padding-block:clamp(64px,9vw,120px)}
+.eyebrow{font:600 11.5px var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--sage)}
+h2{font:500 clamp(40px,6vw,76px)/.95 var(--serif);letter-spacing:-.02em;margin:14px 0 18px}
+h2 em{font-style:italic;color:var(--sage)}
+.muted{color:var(--muted)}
+/* services */
+.svc{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,72px);align-items:start}
+.svc .side{position:sticky;top:100px}
+.cats{display:flex;flex-direction:column;gap:4px;margin-top:24px}
+.cats button{text-align:left;font:500 30px var(--serif);background:none;border:0;padding:6px 0;color:#b5b2aa;cursor:pointer;transition:color .2s;display:flex;align-items:center;gap:14px}
+.cats button::before{content:"";width:0;height:1px;background:var(--ink);transition:width .3s}
+.cats button[aria-pressed="true"]{color:var(--ink)}
+.cats button[aria-pressed="true"]::before{width:36px}
+.rows{border-top:1px solid var(--ink)}
+.r{display:grid;grid-template-columns:1fr auto auto;gap:6px 28px;padding-block:22px;border-bottom:1px solid var(--line);align-items:baseline}
+.r b{font:500 25px var(--serif)}
+.r .t{color:var(--muted);font-size:14px;white-space:nowrap}
+.r .p{font:600 22px var(--serif);font-variant-numeric:tabular-nums;white-space:nowrap}
+.r small{grid-column:1/-1;color:var(--muted);font-size:14.5px;max-width:52ch}
+/* strip */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.strip .ph{aspect-ratio:3/4;border-radius:20px}
+.s1{background-image:url(img/salon-2.jpg),linear-gradient(170deg,#e9d5c7,#b48e78)}
+.s2{background-image:url(img/salon-3.jpg),linear-gradient(170deg,#c7d3c6,#7d9480);transform:translateY(32px)}
+.s3{background-image:url(img/salon-4.jpg),linear-gradient(170deg,#d6c9bd,#6b6d66)}
+.s4{background-image:url(img/salon-1.jpg),linear-gradient(170deg,#7d9480,#1d2420);transform:translateY(32px)}
+/* team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.m{background:var(--paper);border-radius:24px;padding:12px 12px 22px;display:flex;flex-direction:column;gap:8px}
+.m .ph{aspect-ratio:1;border-radius:16px}
+.m b{font:600 26px var(--serif);padding-inline:8px;margin-top:6px}
+.m span{color:var(--muted);font-size:14px;padding-inline:8px}
+/* booking */
+.book{background:var(--deep);color:#e8eee9;border-radius:36px;padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,64px)}
+.book h2{color:#fff}.book h2 em{color:#b9d0bc}
+.steps{display:grid;gap:18px}
+.step{display:grid;gap:10px}
+.step>span{font:600 11px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:#9fb4a3}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:500 14px var(--sans);border:1px solid #3a4840;background:transparent;color:#e8eee9;border-radius:999px;padding:9px 16px;cursor:pointer;transition:all .2s}
+.chips button:hover{border-color:#9fb4a3}
+.chips button[aria-pressed="true"]{background:#e8eee9;color:var(--deep);border-color:#e8eee9}
+.chips button:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+input{font:inherit;font-size:16px;padding:13px 16px;border:1px solid #3a4840;border-radius:14px;background:#252e29;color:#fff;min-width:0;width:100%}
+input::placeholder{color:#8a9a8f}
+.summary{border-top:1px solid #3a4840;padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.summary b{font:600 24px var(--serif);color:#fff}
+.book .btn{background:#e8eee9;color:var(--deep)}.book .btn:hover{background:#b9d0bc}
+.ok{background:#b9d0bc22;padding:14px;border-radius:14px}
+/* faq */
+.faq{max-width:820px}.faq h2{margin-bottom:28px}
+details{border-bottom:1px solid var(--line);padding-block:20px}
+summary{cursor:pointer;font:500 24px var(--serif);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:300 28px/1 var(--sans);color:var(--sage);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:10px 0 0;color:var(--muted);max-width:60ch}
+footer{border-top:1px solid var(--line);padding-block:48px 28px}
+.fg{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end}
+footer .big{font:500 clamp(40px,7vw,88px)/.9 var(--serif);letter-spacing:-.02em}
+footer .big em{font-style:italic;color:var(--sage)}
+.copy{margin-top:36px;font-size:13px;color:var(--muted)}
+.reveal{transform:translateY(28px);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{transform:none}
+:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+@media (max-width:880px){.links{display:none}.hero,.svc,.book{grid-template-columns:1fr}.svc .side{position:static}.team{grid-template-columns:1fr 1fr}
+.strip{grid-template-columns:1fr 1fr}.s2,.s4{transform:none}.badge{left:12px}.spin{right:4px;width:96px;height:96px}.cats{flex-direction:row;flex-wrap:wrap;gap:4px 18px}.cats button{font-size:24px}.cats button::before{display:none}}
+@media (max-width:520px){.team{grid-template-columns:1fr}.r{grid-template-columns:1fr auto}.r .t{grid-column:1}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}.reveal{transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="demo"><span>Demo projekts · izdomāts skaistumkopšanas salons</span><a href="./">← Atpakaļ uz portfolio</a></div>
+<nav class="nav"><div class="wrap"><a class="logo" href="#">Zīle<span>studija</span></a><div class="links"><a href="#pakalpojumi">Pakalpojumi</a><a href="#komanda">Komanda</a><a href="#pieraksts">Pieraksts</a><a href="#jautajumi">Jautājumi</a></div><a class="btn" href="#pieraksts">Pierakstīties</a></div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="reveal">
+    <div class="eyebrow">Mati · Nagi · Uzacis · Rīga</div>
+    <h1 style="margin-top:18px">Laiks <em>sev</em>, bez steigas</h1>
+    <p>Mierīga studija Rīgas klusajā centrā. Pierakstieties tiešsaistē 30 sekundēs, arī vakaros līdz 21:00.</p>
+    <div class="row"><a class="btn" href="#pieraksts">Pierakstīties tiešsaistē</a><a class="btn line" href="#pakalpojumi">Cenrādis</a></div>
+    <div class="rating"><div class="avs"><i style="background:#c9b2a1"></i><i style="background:#7d9480"></i><i style="background:#e9d5c7"></i></div><span><b style="color:var(--ink)">4.9</b> no 380+ klientu vērtējumiem</span></div>
+  </div>
+  <div class="arch reveal">
+    <div class="ph"></div>
+    <svg class="spin" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><circle cx="60" cy="60" r="58" fill="#fbf9f6"/><text><textPath href="#c">PIERAKSTS TIEŠSAISTĒ · 24/7 · </textPath></text><circle cx="60" cy="60" r="5" fill="#7d9480"/></svg>
+    <div class="badge"><span>Tuvākais brīvais laiks</span><b>Šodien, 17:30</b></div>
+  </div>
+</header>
+</div>
+
+<section id="pakalpojumi" style="background:var(--paper)"><div class="wrap svc">
+  <div class="side reveal"><div class="eyebrow">Pakalpojumi un cenas</div><h2>Ko <em>darām</em></h2><p class="muted">Cena ir galīgā. Materiāli iekļauti.</p><div class="cats" id="cats"></div></div>
+  <div class="rows reveal" id="rows"></div>
+</div></section>
+
+<section style="padding-block:0 clamp(64px,9vw,120px);background:var(--paper)"><div class="wrap"><div class="strip reveal"><div class="ph s1"></div><div class="ph s2"></div><div class="ph s3"></div><div class="ph s4"></div></div></div></section>
+
+<section id="komanda"><div class="wrap">
+  <div class="reveal"><div class="eyebrow">Komanda</div><h2>Rokas, kurām <em>uzticas</em></h2></div>
+  <div class="team">
+    <div class="m reveal"><div class="ph" style="background-image:url(img/salon-3.jpg),linear-gradient(170deg,#c7d3c6,#7d9480)"></div><b>Anna</b><span>Frizūras un krāsošana · 9 gadi</span></div>
+    <div class="m reveal"><div class="ph" style="background-image:url(img/salon-4.jpg),linear-gradient(170deg,#e9d5c7,#b48e78)"></div><b>Laura</b><span>Manikīrs un pedikīrs · 6 gadi</span></div>
+    <div class="m reveal"><div class="ph" style="background-image:url(img/salon-2.jpg),linear-gradient(170deg,#d6c9bd,#6b6d66)"></div><b>Elīna</b><span>Uzacis un skropstas · 4 gadi</span></div>
+  </div>
+</div></section>
+
+<section id="pieraksts" style="padding-top:0"><div class="wrap">
+  <div class="book reveal">
+    <div><div class="eyebrow" style="color:#9fb4a3">Pieraksts</div><h2>Izvēlies, kad <em>tev ērti</em></h2><p style="color:#b5c3b8;max-width:36ch">Apstiprinājums ar SMS uzreiz. Atcelt var bez maksas līdz 12 stundām iepriekš.</p></div>
+    <form class="steps" id="f">
+      <div class="step"><span>1 · Pakalpojums</span><div class="chips" id="cs"></div></div>
+      <div class="step"><span>2 · Diena</span><div class="chips" id="cd"></div></div>
+      <div class="step"><span>3 · Laiks</span><div class="chips" id="ct"></div></div>
+      <div class="step"><span>4 · Kontakti</span><div class="two"><input id="n" placeholder="Vārds" required autocomplete="off"><input id="t" type="tel" placeholder="Tālrunis" required autocomplete="off"></div></div>
+      <div class="summary"><div><div style="font-size:13px;color:#9fb4a3">Kopā</div><b id="sum">—</b></div><button class="btn" type="submit">Apstiprināt pierakstu</button></div>
+      <div class="ok" id="ok" hidden></div>
+    </form>
+  </div>
+</div></section>
+
+<section id="jautajumi" style="padding-top:0"><div class="wrap faq">
+  <div class="reveal"><div class="eyebrow">Jautājumi</div><h2>Bieži <em>jautā</em></h2></div>
+  <details><summary>Vai var maksāt ar karti?</summary><p>Jā, pieņemam kartes, Apple Pay un Google Pay.</p></details>
+  <details><summary>Vai ir dāvanu kartes?</summary><p>Jā, jebkurai summai no 20 €. Var nopirkt studijā vai pasūtīt pa tālruni.</p></details>
+  <details><summary>Ko darīt, ja kavēju?</summary><p>Uzrakstiet SMS. Ja kavējums ir ilgāks par 15 minūtēm, piedāvāsim citu laiku.</p></details>
+  <details><summary>Kur novietot auto?</summary><p>Pagalmā ir četras bezmaksas vietas klientiem.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fg"><div class="big">Uz <em>tikšanos</em><br>studijā.</div><div class="muted" style="display:grid;gap:4px">Rīgas centrs<br>P–Sv 9:00–21:00<br>info@jusu-domens.lv</div></div>
+  <div class="copy">Demo lapa. Izstrādāja Dmitrijs Pogodins · dmitrijs.web@outlook.com</div>
+</div></footer>
+
+<script>
+const S={"Mati":[["Sieviešu frizūra","50 min",35,"Konsultācija, mazgāšana, griezums un ieveidošana."],["Vīriešu frizūra","30 min",20,"Griezums ar šķērēm vai mašīnīti."],["Matu krāsošana","2 h",65,"Viena tonī, ieskaitot griezumu galiņiem."]],
+"Nagi":[["Manikīrs ar gēllaku","75 min",30,"Kopšana, forma un noturīgs pārklājums līdz 3 nedēļām."],["Pedikīrs","60 min",35,"Aparāta pedikīrs ar pārklājumu."]],
+"Uzacis":[["Uzacu korekcija un krāsošana","30 min",18,"Forma pēc sejas proporcijām."],["Skropstu laminēšana","60 min",38,"Efekts saglabājas 6–8 nedēļas."]]};
+let cat="Mati";const cats=document.getElementById("cats"),rows=document.getElementById("rows");
+function drawS(){cats.replaceChildren(...Object.keys(S).map(k=>{const b=document.createElement("button");b.type="button";b.textContent=k;b.setAttribute("aria-pressed",k===cat);b.onclick=()=>{cat=k;drawS()};return b}));
+rows.replaceChildren(...S[cat].map(([n,t,p,d])=>{const r=document.createElement("div");r.className="r";r.innerHTML='<b></b><span class="t"></span><span class="p"></span><small></small>';r.querySelector("b").textContent=n;r.querySelector(".t").textContent=t;r.querySelector(".p").textContent=p+" €";r.querySelector("small").textContent=d;return r}))}
+drawS();
+const all=Object.values(S).flat();let svc=0,day=0,time=null;
+const L=["Šodien","Rīt","Ceturtd.","Piektd.","Sestd."];
+function chip(box,label,on,click,dis){const b=document.createElement("button");b.type="button";b.textContent=label;b.setAttribute("aria-pressed",on);b.disabled=!!dis;b.onclick=click;box.append(b)}
+function drawB(){const cs=document.getElementById("cs"),cd=document.getElementById("cd"),ct=document.getElementById("ct");cs.replaceChildren();cd.replaceChildren();ct.replaceChildren();
+all.forEach((s,i)=>chip(cs,s[0],i===svc,()=>{svc=i;drawB()}));
+L.forEach((d,i)=>chip(cd,d,i===day,()=>{day=i;time=null;drawB()}));
+["10:00","11:30","13:00","14:30","16:00","17:30","19:00"].forEach((t,i)=>chip(ct,t,t===time,()=>{time=t;drawB()},(i*3+day*2)%5===0));
+document.getElementById("sum").textContent=all[svc][2]+" € · "+L[day]+(time?", "+time:"")}
+drawB();
+document.getElementById("f").addEventListener("submit",e=>{e.preventDefault();const ok=document.getElementById("ok");if(!time){ok.textContent="Izvēlieties laiku.";ok.hidden=false;return}ok.textContent="Paldies! "+all[svc][0]+" · "+L[day]+" "+time+". (Demo: īstajā lapā pieraksts nonāktu studijas kalendārā.)";ok.hidden=false});
+if("IntersectionObserver"in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll(".reveal").forEach(el=>{if(el.getBoundingClientRect().top>innerHeight)io.observe(el);else el.classList.add("in")})}else document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
+</script>
+</body>
+</html>

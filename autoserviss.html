@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Virzulis — autoserviss Rīgā</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,600;75..100,800&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#0f1113;--panel:#171a1d;--line:#2a2f34;--fg:#eef1f3;--muted:#98a1a9;--y:#ffc21a;--ok:#36c275;
+--disp:"Archivo",system-ui,sans-serif;--sans:"Golos Text",system-ui,sans-serif;color-scheme:dark}
+[hidden]{display:none!important}*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font:16.5px/1.6 var(--sans);overflow-x:clip}
+a{color:inherit}
+.ph{background-size:cover;background-position:center;background-color:#22262a}
+.demo{background:var(--y);color:#111;font-size:12.5px;padding:7px 16px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;font-weight:500}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(15,17,19,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font:800 26px var(--disp);font-stretch:80%;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:14px;height:26px;background:var(--y);transform:skewX(-14deg);display:inline-block}
+.links{display:flex;gap:24px;font-size:15px;color:var(--muted)}.links a{text-decoration:none}.links a:hover{color:var(--fg)}
+.call{display:inline-flex;gap:8px;align-items:center;background:var(--y);color:#111;font:700 15px var(--sans);padding:11px 18px;border-radius:10px;text-decoration:none}
+.hero{position:relative;padding-block:clamp(56px,9vw,120px);overflow:hidden}
+.hero .ph{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(15,17,19,.96) 30%,rgba(15,17,19,.55)),url(img/auto-1.jpg),linear-gradient(120deg,#2b3036,#111)}
+.hero .wrap{position:relative}
+.tag{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:#ffffff08;border-radius:999px;padding:6px 12px;font-size:13px;color:var(--muted)}
+.tag b{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px #36c27533}
+h1{font:800 clamp(48px,9vw,120px)/.88 var(--disp);font-stretch:78%;text-transform:uppercase;letter-spacing:-.01em;margin:20px 0 22px;max-width:12ch}
+h1 span{color:var(--y)}
+.hero p{max-width:46ch;color:#c4cbd1;font-size:18px;margin:0 0 28px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:10px;padding:14px 22px;font:700 15px var(--sans);text-decoration:none;border:0;cursor:pointer}
+.btn.y{background:var(--y);color:#111}.btn.o{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1px #ffffff40}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:56px;max-width:820px}
+.stats div{background:var(--panel);padding:18px}
+.stats b{display:block;font:800 34px var(--disp);font-stretch:80%;color:var(--y)}
+.stats span{font-size:13px;color:var(--muted)}
+section{padding-block:clamp(64px,9vw,110px)}
+.eyebrow{font:700 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--y)}
+h2{font:800 clamp(36px,5.6vw,68px)/.92 var(--disp);font-stretch:80%;text-transform:uppercase;margin:12px 0 16px}
+.muted{color:var(--muted)}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.s{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s}
+.s:hover{border-color:var(--y);transform:translateY(-3px)}
+.s .ic{width:44px;height:44px;border-radius:10px;background:#ffc21a1a;display:grid;place-items:center;color:var(--y);font:800 20px var(--disp)}
+.s b{font:700 22px var(--disp);font-stretch:85%}
+.s .pr{margin-top:auto;font:700 18px var(--sans);font-variant-numeric:tabular-nums}
+.s .pr small{color:var(--muted);font-weight:400;font-size:13px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:center}
+.photo{aspect-ratio:4/3.2;border-radius:20px;background-image:url(img/auto-2.jpg),linear-gradient(140deg,#30353b,#15181b);position:relative;max-width:100%}
+.photo .chip{position:absolute;left:16px;bottom:16px;background:var(--y);color:#111;font-weight:700;padding:10px 14px;border-radius:10px}
+.checks{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px}.checks li::before{content:"✓";color:var(--y);font-weight:800}
+.book{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,48px);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,56px)}
+form{display:grid;gap:12px}
+label{font-size:13px;font-weight:600;color:var(--muted);display:grid;gap:6px}
+input,select{font:inherit;font-size:16px;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:#0f1113;color:var(--fg);min-width:0;width:100%}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.est{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px;flex-wrap:wrap}
+.est b{font:800 30px var(--disp);color:var(--y)}
+.ok{background:#36c27522;color:#9de3bb;padding:12px 14px;border-radius:10px}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.rv{border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:10px}
+.rv .st{color:var(--y);letter-spacing:2px}.rv span{color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);padding-block:48px 28px;margin-top:40px}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}
+footer h4{font:700 12px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--y);margin:0 0 10px}
+.copy{margin-top:36px;font-size:13px;color:var(--muted)}
+.reveal{transform:translateY(26px);transition:transform .9s cubic-bezier(.2,.7,.2,1)}.reveal.in{transform:none}
+:focus-visible{outline:2px solid var(--y);outline-offset:3px}
+@media (max-width:880px){.links{display:none}.svc,.revs{grid-template-columns:1fr 1fr}.split,.book,.fg{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.svc,.revs{grid-template-columns:1fr}.call span{display:none}}
+@media (prefers-reduced-motion:reduce){.reveal{transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="demo"><span>Demo projekts · izdomāts autoserviss</span><a href="./">← Atpakaļ uz portfolio</a></div>
+<nav class="nav"><div class="wrap"><a class="logo" href="#"><i></i>Virzulis</a><div class="links"><a href="#pakalpojumi">Pakalpojumi</a><a href="#kapec">Kāpēc mēs</a><a href="#pieraksts">Pieraksts</a></div><a class="call" href="#pieraksts">☎ <span>Pierakstīties</span></a></div></nav>
+
+<header class="hero"><div class="ph"></div><div class="wrap reveal">
+  <span class="tag"><b></b>Šodien vēl ir 2 brīvi laiki</span>
+  <h1>Remonts bez <span>pārsteigumiem</span></h1>
+  <p>Diagnostika, apkope un remonts visām markām. Cenu nosaucam pirms darba sākuma un turamies pie tās.</p>
+  <div class="row"><a class="btn y" href="#pieraksts">Pierakstīties tiešsaistē</a><a class="btn o" href="#pakalpojumi">Cenas</a></div>
+  <div class="stats"><div><b>12</b><span>gadi pieredzē</span></div><div><b>6 mēn.</b><span>garantija darbiem</span></div><div><b>1 h</b><span>diagnostika</span></div><div><b>4.8</b><span>vērtējums</span></div></div>
+</div></header>
+
+<section id="pakalpojumi"><div class="wrap">
+  <div class="reveal"><div class="eyebrow">Pakalpojumi</div><h2>Ko darām</h2><p class="muted" style="max-width:50ch">Cenas ir orientējošas. Precīzu summu nosauksim pēc diagnostikas, pirms sākam darbu.</p></div>
+  <div class="svc" id="svc"></div>
+</div></section>
+
+<section id="kapec" style="padding-top:0"><div class="wrap split">
+  <div class="photo ph reveal"><span class="chip">Oriģinālās un kvalitatīvas analogās detaļas</span></div>
+  <div class="reveal"><div class="eyebrow">Kāpēc mēs</div><h2>Godīgi un ātri</h2>
+    <ul class="checks"><li>Rādām nomainītās detaļas un skaidrojam, kāpēc tās mainījām</li><li>Bez papildu darbiem bez jūsu piekrišanas</li><li>Gaidīšanas zona ar kafiju un Wi‑Fi</li><li>Maiņas auto uz remonta laiku</li></ul></div>
+</div></section>
+
+<section id="pieraksts" style="padding-top:0"><div class="wrap">
+  <div class="book reveal">
+    <div><div class="eyebrow">Pieraksts</div><h2>Pieraksties 1 minūtē</h2><p class="muted">Apstiprināsim ar SMS. Ja kaut kas mainās, piezvanīsim paši.</p></div>
+    <form id="f">
+      <div class="two"><label>Auto marka<input id="car" placeholder="VW Golf, 2015" required autocomplete="off"></label><label>Pakalpojums<select id="sv"></select></label></div>
+      <div class="two"><label>Datums<input id="d" type="date" required></label><label>Laiks<select id="tm"><option>8:00</option><option>10:00</option><option>12:00</option><option>14:00</option><option>16:00</option></select></label></div>
+      <div class="two"><label>Vārds<input id="n" required autocomplete="off"></label><label>Tālrunis<input id="t" type="tel" required autocomplete="off"></label></div>
+      <div class="est"><div><div class="muted" style="font-size:13px">Orientējoši no</div><b id="sum">—</b></div><button class="btn y" type="submit">Pierakstīties</button></div>
+      <div class="ok" id="ok" hidden></div>
+    </form>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="reveal"><div class="eyebrow">Atsauksmju piemēri</div><h2>Klienti saka</h2></div>
+  <div class="revs">
+    <div class="rv reveal"><div class="st">★★★★★</div><div>“Nosauca cenu iepriekš, un rēķins bija tieši tāds pats.”</div><span>Andris</span></div>
+    <div class="rv reveal"><div class="st">★★★★★</div><div>“Pierakstījos vakarā, nākamajā rītā auto jau bija gatavs.”</div><span>Inga</span></div>
+    <div class="rv reveal"><div class="st">★★★★★</div><div>“Parādīja vecās bremžu kluči. Uzticos.”</div><span>Sergejs</span></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><div class="fg">
+  <div><a class="logo" href="#"><i></i>Virzulis</a><p class="muted" style="max-width:30ch">Autoserviss Rīgā. Visas markas.</p></div>
+  <div><h4>Darba laiks</h4>P–Pk 8:00–19:00<br>S 9:00–15:00<br>Sv slēgts</div>
+  <div><h4>Kontakti</h4>Rīga<br>info@jusu-domens.lv</div>
+</div><div class="copy">Demo lapa. Izstrādāja Dmitrijs Pogodins · dmitrijs.web@outlook.com</div></div></footer>
+
+<script>
+const S=[["D","Datora diagnostika","Kļūdu nolasīšana un pārbaude",25],["E","Eļļas maiņa","Ar filtru, eļļa iekļauta",55],["B","Bremžu kluču maiņa","Vienai asij",40],["R","Riepu maiņa","4 riteņi ar balansēšanu",35],["K","Kondicioniera uzpilde","Ar hermētiskuma pārbaudi",45],["S","Ritošās daļas remonts","Pēc diagnostikas",60]];
+const box=document.getElementById("svc"),sv=document.getElementById("sv");
+S.forEach(([ic,n,d,p],i)=>{const e=document.createElement("div");e.className="s reveal";e.innerHTML='<div class="ic"></div><b></b><span class="muted"></span><div class="pr"><small>no </small><span></span></div>';e.querySelector(".ic").textContent=ic;e.querySelector("b").textContent=n;e.querySelector(".muted").textContent=d;e.querySelector(".pr span").textContent=p+" €";box.append(e);const o=document.createElement("option");o.value=i;o.textContent=n;sv.append(o)});
+const sum=()=>document.getElementById("sum").textContent=S[sv.value][3]+" €";sv.onchange=sum;sum();
+document.getElementById("f").addEventListener("submit",e=>{e.preventDefault();const ok=document.getElementById("ok");ok.textContent="Paldies! "+S[sv.value][1]+", "+document.getElementById("tm").value+". Apstiprināsim ar SMS. (Demo: īstajā lapā pieraksts nonāktu servisa kalendārā.)";ok.hidden=false});
+if("IntersectionObserver"in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll(".reveal").forEach(el=>{if(el.getBoundingClientRect().top>innerHeight)io.observe(el);else el.classList.add("in")})}else document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Saule Coffee · demo</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700;800;900&display=swap"><style>:root{--bg:#f5efe6;--hdbg:rgba(245,239,230,.97);--ink:#2b2118;--acc:#2f6b4f;--acc2:#f2c46d;--disp:Caladea,serif;--card:#fff;--line:#e6dccd;--soft:#ebe2d4;--mut:#7d6f62;--tagbg:#e3efe7;--sk:#e2dbd0}
+.row,.card,.hrs,.tog .on{background:var(--card)!important}.s{color:var(--ink)}.chip.on{background:var(--ink);color:var(--bg)}
+
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);margin:0;font-family:Inter;position:relative}
+#hook{position:absolute;left:22px;right:22px;top:30px;font-size:31px;font-weight:900;line-height:1.08;color:#fff;letter-spacing:-.5px}
+#hook em{font-style:normal;color:var(--acc2)}
+#step{position:absolute;left:22px;top:124px;font-size:14px;color:#9a948e;font-weight:600}
+#cnt{position:absolute;right:22px;top:118px;font:800 15px Inter;color:#111;background:var(--acc2);padding:4px 10px;border-radius:8px}
+#phone{position:absolute;left:51px;top:158px;width:330px;height:592px;border-radius:46px;background:#000;padding:9px;box-shadow:0 0 0 2px #2b2724,0 30px 60px rgba(0,0,0,.6);transform-origin:50% 45%}
+#screen{width:312px;height:574px;border-radius:38px;overflow:hidden;position:relative;background:var(--bg)}
+.page{position:absolute;inset:0;overflow:hidden;background:var(--bg)}
+.zz{width:360px;zoom:.8667}
+#tap{position:absolute;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.5);border:2px solid rgba(0,0,0,.25);opacity:0;z-index:50}
+/* site */
+.s{font-family:Inter;color:var(--ink)}
+.hd{position:sticky;top:0;z-index:5;background:var(--hdbg);border-bottom:1px solid var(--line)}
+.hd1{display:flex;justify-content:space-between;align-items:center;padding:16px 18px 8px}
+.lg{font-family:var(--disp);font-size:25px;font-weight:700;letter-spacing:.5px}
+.lg i{color:var(--acc)}
+.ph{background:var(--ink);color:#fff;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600}
+.tabs{display:flex;gap:6px;padding:4px 14px 12px}
+.tb{font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;color:var(--mut)}
+.tb.on{background:var(--acc);color:#fff}
+.hero{position:relative;height:430px;background-size:cover;background-position:center}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.75))}
+.hc{position:absolute;left:20px;right:20px;bottom:24px;z-index:2;color:#fff}
+.kick{font-size:11px;letter-spacing:.18em;font-weight:700;text-transform:uppercase;color:var(--acc2)}
+.h1{font-family:var(--disp);font-size:42px;line-height:1.02;margin:8px 0 10px}
+.h1 i{color:var(--acc2)}
+.hp{font-size:14px;line-height:1.5;opacity:.9}
+.bt{display:flex;gap:8px;margin-top:16px}
+.b1{flex:1;background:var(--acc);color:#fff;text-align:center;padding:14px;border-radius:12px;font-weight:700}
+.b2{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.5);color:#fff;padding:14px 16px;border-radius:12px;font-weight:600}
+.sec{padding:24px 18px}
+.h2{font-family:var(--disp);font-size:28px;margin-bottom:4px}
+.sub{font-size:13px;color:var(--mut);margin-bottom:14px}
+.fav{display:flex;gap:10px}
+.card{flex:1;background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 6px 16px rgba(60,30,10,.08)}
+.card .im{height:120px;background-size:cover;background-position:center}
+.card .t{padding:10px 12px;font-weight:700;font-size:14px}.card .t span{display:block;color:var(--acc);font-size:13px;margin-top:2px}
+.strip{display:flex;justify-content:space-around;background:var(--ink);color:var(--bg);margin:0 18px;border-radius:16px;padding:16px 6px;text-align:center;font-size:11px;color:#bfb2a5}
+.strip b{display:block;color:#fff;font-size:17px;margin-bottom:2px}
+.chips{display:flex;gap:6px;margin:4px 0 14px}.chip{font-size:12px;font-weight:600;padding:7px 12px;border-radius:999px;background:var(--soft)}.chip.on{background:var(--ink);color:#fff}
+.row{display:flex;gap:12px;background:var(--card);border-radius:16px;padding:10px;margin-bottom:10px;align-items:center}
+.row .im{width:86px;height:86px;border-radius:12px;background-size:cover;background-position:center;flex:none}
+.row .n{font-weight:700;font-size:15px}.row .d{font-size:12px;color:var(--mut);margin:3px 0 6px;line-height:1.35}.row .p{font-weight:800;color:var(--acc)}
+.tag2{display:inline-block;font-size:10px;font-weight:700;background:var(--tagbg);color:var(--acc);padding:2px 7px;border-radius:6px;margin-left:6px;vertical-align:2px}
+.ab{height:260px;background-size:cover;background-position:center;border-radius:0 0 26px 26px}
+.q{font-family:var(--disp);font-style:italic;font-size:22px;line-height:1.35;margin:4px 0 12px}
+.tx{font-size:14px;line-height:1.6;color:var(--mut)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}.g2 div{height:110px;border-radius:14px;background-size:cover;background-position:center}
+.tog{display:flex;background:var(--soft);border-radius:12px;padding:4px;margin:10px 0 16px}.tog div{flex:1;text-align:center;padding:10px;font-weight:700;font-size:14px;border-radius:9px;color:var(--mut)}.tog .on{background:#fff;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.big{display:block;background:var(--acc);color:#fff;text-align:center;padding:17px;border-radius:14px;font-weight:800;font-size:17px;margin-bottom:10px}
+.wa{display:block;background:#1f9d55;color:#fff;text-align:center;padding:15px;border-radius:14px;font-weight:700;font-size:15px}
+.map{height:150px;border-radius:16px;margin-top:18px;background:var(--soft);position:relative;overflow:hidden}
+.map:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 46%,#fff 46% 50%,transparent 50%),linear-gradient(0deg,transparent 58%,#fff 58% 62%,transparent 62%),linear-gradient(35deg,transparent 30%,#f3ece0 30% 34%,transparent 34%)}
+.pin{position:absolute;left:46%;top:38%;width:26px;height:26px;border-radius:50% 50% 50% 0;background:var(--acc);transform:rotate(-45deg);box-shadow:0 4px 8px rgba(0,0,0,.3)}
+.hrs{margin-top:16px;background:var(--card);border-radius:16px;padding:6px 16px}.hrs div{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #f0e8dc;font-size:14px}.hrs div:last-child{border:0}
+.sk{color:transparent!important;background:var(--sk)!important;background-image:none!important;border-color:transparent!important;box-shadow:none!important;border-radius:10px}
+.sk *{visibility:hidden!important}.sk:after{display:none}
+#timer{position:absolute;right:76px;top:118px;font:700 15px 'DejaVu Sans Mono',monospace;color:var(--acc2);padding:4px 6px}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:60;pointer-events:none}
+</style><style>
+.page{position:static!important;inset:auto;overflow:visible;display:none}.page.cur{display:block}
+.zz{width:auto;zoom:1;max-width:560px;margin:0 auto}
+.s{min-height:100vh;background:var(--bg)}
+.tb,.b1,.b2,.chip,.card,.row,.big,.wa,.ph,.tog div{cursor:pointer}
+.hero{height:min(78vh,560px)}
+.demo{position:fixed;left:10px;bottom:10px;z-index:9;font:600 12px Inter,sans-serif;background:rgba(0,0,0,.75);color:#fff;padding:7px 11px;border-radius:999px;text-decoration:none}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font:600 14px Inter,sans-serif;z-index:10}
+[hidden]{display:none!important}.chip.on{color:var(--bg)!important}
+@media (min-width:700px){body{background:var(--soft)}.zz{box-shadow:0 0 0 1px var(--line),0 30px 80px rgba(0,0,0,.12)}}
+</style></head><body><div class="page" id="pg0"><div class="zz"><div class="s"><div class="hd"><div class="hd1"><div class="lg">Saule<i>.</i></div><div class="ph">☕ Order</div></div><div class="tabs"><div class="tb on">Home</div><div class="tb">Menu</div><div class="tb">About</div><div class="tb">Visit</div></div></div><div class="hero" style="background-image:url(img/kafejnica-saule/05.jpg);background-position:center"><div class="hc"><div class="kick">Specialty coffee · Riga</div><div class="h1">Slow mornings,<br>good <i>coffee</i>.</div><div class="hp">Beans roasted in Latvia, fresh pastries every morning from 8:00.</div><div class="bt"><div class="b1">Order ahead</div><div class="b2">Menu</div></div></div></div>
+<div class="sec"><div class="h2">Regulars' favourites</div><div class="sub">what people come back for</div><div class="fav"><div class="card"><div class="im" style="background-image:url(img/kafejnica-saule/00.jpg);background-position:center"></div><div class="t">Flat white<span>€3.20</span></div></div><div class="card"><div class="im" style="background-image:url(img/kafejnica-saule/11.jpg);background-position:center"></div><div class="t">Cortado<span>€2.80</span></div></div></div></div><div class="strip"><div><b>8:00</b>opens daily</div><div><b>Wi-Fi</b>& sockets</div><div><b>4.8 ★</b>340 reviews</div></div><div style="height:40px"></div></div></div></div><div class="page" id="pg1"><div class="zz"><div class="s"><div class="hd"><div class="hd1"><div class="lg">Saule<i>.</i></div><div class="ph">☕ Order</div></div><div class="tabs"><div class="tb">Home</div><div class="tb on">Menu</div><div class="tb">About</div><div class="tb">Visit</div></div></div><div class="sec"><div class="h2">Menu</div><div class="sub">oat & almond milk free of charge</div><div class="chips"><div class="chip on">Coffee</div><div class="chip">Tea</div><div class="chip">Pastries</div><div class="chip">Brunch</div></div><div class="row"><div class="im" style="background-image:url(img/kafejnica-saule/08.jpg);background-position:center"></div><div><div class="n">Flat white<span class=tag2>BESTSELLER</span></div><div class="d">double ristretto, silky milk</div><div class="p">€3.20</div></div></div><div class="row"><div class="im" style="background-image:url(img/kafejnica-saule/03.jpg);background-position:center"></div><div><div class="n">Cappuccino</div><div class="d">classic, extra foam on request</div><div class="p">€3.40</div></div></div><div class="row"><div class="im" style="background-image:url(img/kafejnica-saule/04.jpg);background-position:center"></div><div><div class="n">Espresso flight<span class=tag2>NEW</span></div><div class="d">three origins side by side</div><div class="p">€4.90</div></div></div><div class="row"><div class="im" style="background-image:url(img/kafejnica-saule/10.jpg);background-position:center"></div><div><div class="n">Latte</div><div class="d">mild and creamy, any milk</div><div class="p">€3.60</div></div></div><div class="row"><div class="im" style="background-image:url(img/kafejnica-saule/01.jpg);background-position:center"></div><div><div class="n">Beans to go</div><div class="d">250 g, roasted this week</div><div class="p">€12.00</div></div></div><div class="row"><div class="im" style="background-image:url(img/kafejnica-saule/02.jpg);background-position:center"></div><div><div class="n">Morning set</div><div class="d">croissant + coffee until 11:00</div><div class="p">€5.50</div></div></div></div></div></div></div><div class="page" id="pg2"><div class="zz"><div class="s"><div class="hd"><div class="hd1"><div class="lg">Saule<i>.</i></div><div class="ph">☕ Order</div></div><div class="tabs"><div class="tb">Home</div><div class="tb">Menu</div><div class="tb on">About</div><div class="tb">Visit</div></div></div><div class="ab" style="background-image:url(img/kafejnica-saule/07.jpg);background-position:center"></div><div class="sec"><div class="kick" style="color:var(--acc)">Our story</div><div class="q">"We roast small batches so every cup tastes like the first one."</div><div class="tx">Saule started in 2019 as a two-table coffee bar. Today it's still the same idea: good beans, no rush, and a barista who remembers your order.</div><div class="g2"><div style="background-image:url(img/kafejnica-saule/06.jpg);background-position:center"></div><div style="background-image:url(img/kafejnica-saule/09.jpg);background-position:center"></div></div><div class="strip" style="margin:18px 0 0"><div><b>2019</b>since</div><div><b>12</b>origins</div><div><b>8:00</b>opens</div></div></div></div></div></div><div class="page" id="pg3"><div class="zz"><div class="s"><div class="hd"><div class="hd1"><div class="lg">Saule<i>.</i></div><div class="ph">☕ Order</div></div><div class="tabs"><div class="tb">Home</div><div class="tb">Menu</div><div class="tb">About</div><div class="tb on">Visit</div></div></div><div class="sec"><div class="h2">Visit us</div><div class="sub">skip the queue: order ahead</div><div class="tog"><div class="on">Order ahead · 5 min</div><div>Book a table</div></div><div class="big">☕ Order ahead</div><div class="wa">💬 Message us on WhatsApp</div><div class="map"><div class="pin"></div></div><div class="hrs"><div><span>Mon – Fri</span><b>8:00 – 19:00</b></div><div><span>Saturday</span><b>9:00 – 18:00</b></div><div><span>Sunday</span><b>10:00 – 16:00</b></div></div></div></div></div></div><a class="demo" href="./">← Dmitrijs · portfolio</a><div class="toast" id="toast" hidden></div><script>
+const P=[...document.querySelectorAll('.page')];
+function go(i){P.forEach((p,j)=>p.classList.toggle('cur',j===i));scrollTo(0,0);try{history.replaceState(null,'','#'+i)}catch(_){}}
+P.forEach(p=>p.querySelectorAll('.tb').forEach((t,i)=>t.addEventListener('click',()=>go(i))));
+document.querySelectorAll('.hero .b1').forEach(b=>b.addEventListener('click',()=>go(3)));
+document.querySelectorAll('.hero .b2').forEach(b=>b.addEventListener('click',()=>go(1)));
+document.querySelectorAll('.card').forEach(b=>b.addEventListener('click',()=>go(1)));
+document.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',()=>{ch.parentNode.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===ch))}));
+document.querySelectorAll('.tog div').forEach(t=>t.addEventListener('click',()=>{t.parentNode.querySelectorAll('div').forEach(x=>x.classList.toggle('on',x===t))}));
+const T=document.getElementById('toast');function toast(s){T.textContent=s;T.hidden=false;clearTimeout(toast.x);toast.x=setTimeout(()=>T.hidden=true,2200)}
+document.querySelectorAll('.big,.wa,.ph,.row').forEach(b=>b.addEventListener('click',()=>toast('Demo only: in a real site this opens the call / chat / order.')));
+go(+(location.hash.slice(1))||0);
+</script></body></html>
