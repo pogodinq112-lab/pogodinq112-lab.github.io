@@ -8,7 +8,9 @@ lv: {
   cta: "Apspriest projektu", cta2: "Skatīt darbus",
   f1: "dienas līdz pirmajai versijai", f2: "darbi portfolio", f3: "valodas: LV · RU · EN",
   scroll: "ritiniet",
-  worksH: "Darbi", worksSub: "Demo projekti, kas parāda, kā var izskatīties jūsu lapa. Atveriet un pamēģiniet: cenrāži, formas un pieraksts strādā.",
+  clientsH: "Klientu projekti", clientsSub: "Īsti uzņēmumi Rīgā un to lapas. Atveriet un apskatiet, kā tās strādā dzīvē.",
+  live: "Tiešsaistē", wip: "Izstrādē", visit: "Atvērt lapu",
+  worksH: "Demo projekti", worksSub: "Demo lapas izdomātiem uzņēmumiem, kas parāda, kā var izskatīties jūsu lapa. Cenrāži, formas un pieraksts strādā.",
   fAll: "Visi", fFood: "Ēdināšana", fBeauty: "Skaistums", fAuto: "Auto", fBiz: "Uzņēmumi", fShop: "Veikali",
   open: "Atvērt demo", pages4: "4 lapas", page1: "1 lapa",
   aiH: "AI boti, kas strādā 24/7", aiSub: "Bots atbild klientiem, pieņem pasūtījumus un pierakstus, un katrs pieteikums pats nonāk tabulā un pie menedžera telefonā. Pamēģiniet: pasūtiet picu.",
@@ -45,7 +47,9 @@ ru: {
   cta: "Обсудить проект", cta2: "Смотреть работы",
   f1: "дня до первой версии", f2: "работ в портфолио", f3: "языка: LV · RU · EN",
   scroll: "листайте",
-  worksH: "Работы", worksSub: "Демо-проекты, которые показывают, как может выглядеть ваш сайт. Откройте и попробуйте: прайсы, формы и запись работают.",
+  clientsH: "Проекты клиентов", clientsSub: "Настоящие компании в Риге и их сайты. Откройте и посмотрите, как они работают вживую.",
+  live: "Онлайн", wip: "В работе", visit: "Открыть сайт",
+  worksH: "Демо-проекты", worksSub: "Демо-сайты для выдуманных компаний: так может выглядеть ваш сайт. Прайсы, формы и запись работают.",
   fAll: "Все", fFood: "Еда", fBeauty: "Красота", fAuto: "Авто", fBiz: "Компании", fShop: "Магазины",
   open: "Открыть демо", pages4: "4 страницы", page1: "1 страница",
   aiH: "AI-боты, которые работают 24/7", aiSub: "Бот отвечает клиентам, принимает заказы и записи, а каждая заявка сама попадает в таблицу и на телефон менеджеру. Попробуйте: закажите пиццу.",
@@ -82,7 +86,9 @@ en: {
   cta: "Discuss a project", cta2: "See my work",
   f1: "days to a first version", f2: "projects in portfolio", f3: "languages: LV · RU · EN",
   scroll: "scroll",
-  worksH: "Work", worksSub: "Demo projects showing what your site could look like. Open them and try: price lists, forms and booking all work.",
+  clientsH: "Client projects", clientsSub: "Real businesses in Riga and their websites. Open them and see how they work live.",
+  live: "Live", wip: "In progress", visit: "Visit site",
+  worksH: "Demo projects", worksSub: "Demo sites for fictional businesses, showing what your site could look like. Price lists, forms and booking all work.",
   fAll: "All", fFood: "Food", fBeauty: "Beauty", fAuto: "Auto", fBiz: "Business", fShop: "Shops",
   open: "Open demo", pages4: "4 pages", page1: "1 page",
   aiH: "AI bots that work 24/7", aiSub: "A bot answers customers, takes orders and bookings, and every request lands in a spreadsheet and on the manager's phone. Try it: order a pizza.",
@@ -111,6 +117,30 @@ en: {
   copy: "Copy", copied: "Address copied", sel: "Address selected, press Ctrl+C", ig: "Message on Instagram",
   foot: "© 2026 Dmitrijs Pogodins · Riga"
 }};
+
+/* Klientu projekti (Dmitrijs atļāva rādīt portfolio 2026-10-21). wip = vēl izstrādē */
+window.CLIENTS = [
+  { s: "lapsabarber", n: "LapsaBarber", url: "https://lapsabarber.netlify.app/", host: "lapsabarber.netlify.app",
+    k: { lv: "Bārberšops · Āgenskalns", ru: "Барбершоп · Агенскалнс", en: "Barbershop · Āgenskalns" },
+    d: { lv: "“Huligānisks premium” dizains ar bārdas naža griezuma animāciju, cenrādis-kalkulators ar kombo cenu, darbu galerija un pieraksts Fresha.",
+         ru: "Дизайн «хулиганский премиум» с анимацией среза бритвы, прайс-калькулятор с комбо-ценой, галерея работ и запись через Fresha.",
+         en: "“Hooligan premium” design with a razor-cut animation, price calculator with a combo deal, work gallery and Fresha booking." } },
+  { s: "booksandcoffee", n: "Books & Coffee", url: "https://booksandcoffee.netlify.app/", host: "booksandcoffee.netlify.app",
+    k: { lv: "Grāmatnīca un kafija · Stabu iela", ru: "Книги и кофе · Stabu iela", en: "Books & coffee · Stabu iela" },
+    d: { lv: "Katalogs ar cenām un kategorijām, pasūtīšana vienā klikšķī caur Instagram Direct, piegāde un pasākumi.",
+         ru: "Каталог с ценами и категориями, заказ в один клик через Instagram Direct, доставка и мероприятия.",
+         en: "Catalogue with prices and categories, one-tap ordering via Instagram Direct, delivery and events." } },
+  { s: "kzart", n: "Studija KZart", url: "https://studiokzart.netlify.app/", host: "studiokzart.netlify.app",
+    k: { lv: "Keramikas studija · Vagoni", ru: "Керамическая студия · Vagoni", en: "Ceramics studio · Vagoni" },
+    d: { lv: "Roku darba keramikas galerija, meistarklases dzimšanas dienām un ballītēm, individuāli pasūtījumi un kontakti.",
+         ru: "Галерея керамики ручной работы, мастер-классы для праздников и компаний, индивидуальные заказы и контакты.",
+         en: "Handmade ceramics gallery, workshops for birthdays and parties, custom orders and contacts." } },
+  { s: "rigamanicure", n: "Riga Manicure", url: "https://pogodinq112-lab.github.io/riga-manicure/", host: "riga-manicure", wip: true,
+    k: { lv: "Manikīra kurss · Sarkandaugava", ru: "Курс маникюра · Саркандаугава", en: "Nail course · Sarkandaugava" },
+    d: { lv: "Kursa lapa Y2K stilā: hroma burti, velkamas uzlīmes ar meistares darbiem, programma dienasgrāmatā un pieteikšanās.",
+         ru: "Сайт курса в стиле Y2K: хромовые буквы, перетаскиваемые наклейки с работами мастера, программа-дневник и запись.",
+         en: "Course page in Y2K style: chrome lettering, draggable stickers with the artist's work, diary-style programme and sign-up." } }
+];
 
 /* Demo projekti: slug, nosaukums, kategorija, forma (mobile = telefona demo), apraksts katrā valodā */
 window.WORKS = [

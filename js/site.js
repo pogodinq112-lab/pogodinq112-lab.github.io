@@ -36,8 +36,25 @@
     initCards();
   }
 
+  // klientu projekti: pārlūka logs ar garo skrīnšotu + telefons virsū
+  function renderClients() {
+    var C = window.CLIENTS || [];
+    $("#clientsGrid").innerHTML = C.map(function (c) {
+      return '<li class="card ccard"><a href="' + c.url + '" target="_blank" rel="noopener">' +
+        '<div class="shot cshot">' +
+          '<span class="win"><span class="bar"><i></i><i></i><i></i><em>' + c.host + "</em></span>" +
+            '<img src="img/shots/' + c.s + '-long.webp" srcset="img/shots/' + c.s + '-long-sm.webp 480w, img/shots/' + c.s + '-long.webp 900w" sizes="(min-width: 900px) 40vw, 86vw" width="900" height="2400" loading="lazy" alt=""></span>' +
+          '<span class="ph ph-c"><img src="img/shots/' + c.s + '-m.webp" srcset="img/shots/' + c.s + '-m-sm.webp 240w, img/shots/' + c.s + '-m.webp 420w" sizes="(min-width: 900px) 10vw, 24vw" width="420" height="909" loading="lazy" alt=""></span>' +
+          '<span class="status' + (c.wip ? " wip" : "") + '"><i></i>' + (c.wip ? T[L].wip : T[L].live) + "</span>" +
+        "</div>" +
+        '<div class="meta"><div><span class="kind">' + c.k[L] + "</span><h3>" + c.n + "</h3><p>" + c.d[L] + '</p><span class="visit">' + T[L].visit + " ↗</span></div></div>" +
+        "</a></li>";
+    }).join("");
+  }
+
   function apply() {
     root.lang = L;
+    renderClients();
     $$("[data-i]").forEach(function (e) { var v = T[L][e.dataset.i]; if (v != null) e.textContent = v; });
     $$(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.l === L)); });
     $("#mq").innerHTML = (T[L].rot.concat(T[L].rot)).map(function (w) { return "<span>" + w + "</span>"; }).join("");
@@ -69,9 +86,9 @@
   function applyFilter(f) {
     current = f;
     $$(".filters button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.f === f)); });
-    var cards = $$(".card");
+    var cards = $$("#grid .card");
     cards.forEach(function (c) { c.classList.toggle("is-out", f !== "all" && c.dataset.c !== f); });
-    if (MOTION) gsap.fromTo($$(".card:not(.is-out)"), { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: .6, stagger: .06, ease: "expo.out", overwrite: true });
+    if (MOTION) gsap.fromTo($$("#grid .card:not(.is-out)"), { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: .6, stagger: .06, ease: "expo.out", overwrite: true });
     if (hasGSAP) ScrollTrigger.refresh();
   }
   $(".filters").addEventListener("click", function (e) { var b = e.target.closest("button[data-f]"); if (b) applyFilter(b.dataset.f); });
@@ -205,7 +222,7 @@
     document.addEventListener("pointerover", function (e) {
       var card = e.target.closest(".card a"), link = !card && e.target.closest("a, button, input");
       c.classList.toggle("is-view", !!card); c.classList.toggle("is-link", !!link);
-      lab.textContent = card ? T[L].open : "";
+      lab.textContent = card ? (card.closest("#clientsGrid") ? T[L].visit : T[L].open) : "";
     });
     $$(".magnetic").forEach(function (b) {
       var xTo = gsap.quickTo(b, "x", { duration: .6, ease: "elastic.out(1, .4)" }), yTo = gsap.quickTo(b, "y", { duration: .6, ease: "elastic.out(1, .4)" });

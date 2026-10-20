@@ -169,6 +169,25 @@ h1, h2, h3, p { margin: 0; }
 .go { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); font-size: 1.1rem; transition: background-color .3s, color .3s, transform .5s var(--ease); }
 .card a:hover .go { background: var(--fg); color: var(--bg); transform: rotate(-45deg); }
 
+/* ---------- Klientu projekti ---------- */
+.cgrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 30px; }
+@media (min-width: 900px) { .cgrid { grid-template-columns: repeat(2, 1fr); gap: 34px 30px; } }
+.cshot { aspect-ratio: 16 / 12; background: radial-gradient(120% 90% at 0% 0%, rgba(77,107,255,.28), transparent 60%), linear-gradient(160deg, #121628, #090b12); }
+.cshot .win { left: 6%; right: 18%; top: 8%; }
+.cshot .win .bar em { margin: 0 auto; padding: 2px 10px; border-radius: 5px; background: rgba(255,255,255,.06); font: 400 .625rem/1.4 var(--body); font-style: normal; color: var(--muted); }
+.ph-c { width: 25%; right: 6%; bottom: 8%; top: auto; transform: rotate(4deg); z-index: 2; }
+.card a:hover .ph-c { transform: rotate(0deg) translateY(-12px); }
+.status { position: absolute; z-index: 4; left: 16px; top: 14px; display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border-radius: 999px; font: 600 .75rem/1 var(--body);
+  background: rgba(7,8,12,.7); border: 1px solid var(--line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: #3ddc84; box-shadow: 0 0 0 0 rgba(61,220,132,.7); }
+.motion .status i { animation: pulse 1.8s infinite; }
+.status.wip i { background: var(--hi); box-shadow: none; animation: none; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(61,220,132,.6); } 70% { box-shadow: 0 0 0 8px rgba(61,220,132,0); } 100% { box-shadow: 0 0 0 0 rgba(61,220,132,0); } }
+.ccard .meta h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); margin-top: 4px; }
+.kind { font-size: .8125rem; color: var(--accent-2); letter-spacing: .02em; }
+.visit { display: inline-block; margin-top: 12px; font-weight: 600; font-size: .9375rem; border-bottom: 1px solid currentColor; padding-bottom: 2px; transition: color .3s; }
+.card a:hover .visit { color: var(--accent-2); }
+
 /* ---------- AI ---------- */
 .ai { display: grid; grid-template-columns: 1fr; gap: 18px; }
 @media (min-width: 860px) { .ai { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
