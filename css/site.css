@@ -250,6 +250,18 @@ h1, h2, h3, p { margin: 0; }
 .plan li { display: flex; gap: 10px; font-size: .9375rem; }
 .plan li::before { content: ""; flex: none; width: 18px; height: 18px; margin-top: 2px; border-radius: 50%; background: rgba(77,107,255,.2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%238aa0ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat; }
 .plan .btn { width: 100%; }
+.term { display: inline-flex; align-self: flex-start; align-items: center; gap: 7px; margin: -2px 0 10px; padding: 6px 11px; border-radius: 999px; font-size: .8125rem; font-weight: 500; background: rgba(255,255,255,.06); border: 1px solid var(--line); }
+.term::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #3ddc84; }
+.plus { font-size: .875rem; font-weight: 600; color: var(--accent-2); margin-bottom: 2px; }
+.plan-hot .plus { color: #fff; }
+.plan-hot .term { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.25); }
+.plan .feat { gap: 11px; }
+.plan .feat li { line-height: 1.45; }
+.all { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 22px; padding: 18px 22px; border: 1px solid var(--line); border-radius: var(--r); background: var(--glass); }
+.all h3 { font: 600 1rem/1.2 var(--display); letter-spacing: -.02em; margin-right: 8px; }
+.all ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.all li { display: flex; align-items: center; gap: 8px; font-size: .9375rem; color: var(--muted); }
+.all li::before { content: "✓"; color: #3ddc84; font-weight: 700; }
 .plan-hot { border-radius: var(--r); background: linear-gradient(160deg, #4d6bff 0%, #2b3fd0 55%, #1d2aa0 100%); box-shadow: 0 30px 80px -30px rgba(77,107,255,.9); }
 .plan-hot .pd, .plan-hot .amount .eur { color: rgba(255,255,255,.75); }
 .plan-hot li::before { background-color: rgba(255,255,255,.2); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }

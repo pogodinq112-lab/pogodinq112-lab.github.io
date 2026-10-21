@@ -56,6 +56,11 @@
     root.lang = L;
     renderClients();
     $$("[data-i]").forEach(function (e) { var v = T[L][e.dataset.i]; if (v != null) e.textContent = v; });
+    // saraksti (tarifu saturs)
+    $$("ul[data-list]").forEach(function (ul) {
+      var v = T[L][ul.dataset.list]; if (!Array.isArray(v)) return;
+      ul.replaceChildren.apply(ul, v.map(function (t) { var li = document.createElement("li"); li.textContent = t; return li; }));
+    });
     $$(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.l === L)); });
     $("#mq").innerHTML = (T[L].rot.concat(T[L].rot)).map(function (w) { return "<span>" + w + "</span>"; }).join("");
     rotIndex = 0; $("#rot").textContent = T[L].rot[0];
