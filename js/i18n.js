@@ -209,7 +209,7 @@ window.CLIENTS = [
     d: { lv: "“Huligānisks premium” dizains ar bārdas naža griezuma animāciju, cenrādis-kalkulators ar kombo cenu, darbu galerija un pieraksts Fresha.",
          ru: "Дизайн «хулиганский премиум» с анимацией среза бритвы, прайс-калькулятор с комбо-ценой, галерея работ и запись через Fresha.",
          en: "“Hooligan premium” design with a razor-cut animation, price calculator with a combo deal, work gallery and Fresha booking." } },
-  { s: "booksandcoffee", n: "Books & Coffee", url: "https://booksandcoffee.netlify.app/", host: "booksandcoffee.netlify.app",
+  { s: "booksandcoffee", n: "Books & Coffee", url: "https://booksandcoffee.online/", host: "booksandcoffee.online",
     k: { lv: "Grāmatnīca un kafija · Stabu iela", ru: "Книги и кофе · Stabu iela", en: "Books & coffee · Stabu iela" },
     d: { lv: "Katalogs ar cenām un kategorijām, pasūtīšana vienā klikšķī caur Instagram Direct, piegāde un pasākumi.",
          ru: "Каталог с ценами и категориями, заказ в один клик через Instagram Direct, доставка и мероприятия.",
